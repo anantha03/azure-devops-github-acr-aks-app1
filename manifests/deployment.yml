@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ananthaazuredevopsgithubacraksapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ananthaazuredevopsgithubacraksapp
+  template:
+    metadata:
+      labels:
+        app: ananthaazuredevopsgithubacraksapp 
+    spec:
+      containers:
+        - name: ananthaazuredevopsgithubacraksapp 
+          image: acraksoreops.azurecr.io/ananthaazuredevopsgithubacraksapp
+          ports:
+          - containerPort: 80
